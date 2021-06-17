@@ -226,7 +226,7 @@ function processVideo()
   videoCapture.read(matSrc);  // Capture Video Image To Mat Src
   matSrc.copyTo(matDst);  // Copy Src To Dst
 
-resize( matDst, matDst, cv::Size(), height, width );
+cv.resize( matDst, matDst, cv.Size(), height, width );
 
   cv.cvtColor(matDst, matGrey, cv.COLOR_RGBA2GRAY, 0);  // Get Grey Image
   classifier.detectMultiScale(matGrey, faces, 1.1, 3, 0);  // Detect Faces
