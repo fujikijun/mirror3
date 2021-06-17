@@ -224,9 +224,9 @@ function processVideo()
   
   const begin = Date.now();
   videoCapture.read(matSrc);  // Capture Video Image To Mat Src
-  matSrc.copyTo(matDst);  // Copy Src To Dst
+//matSrc.copyTo(matDst);  // Copy Src To Dst
 
-cv.Resize( matDst, matDst, cv.Size(), width, height );
+cv.Resize( matSrc, matDst, cv.Size(), width, height );
 
   cv.cvtColor(matDst, matGrey, cv.COLOR_RGBA2GRAY, 0);  // Get Grey Image
   classifier.detectMultiScale(matGrey, faces, 1.1, 3, 0);  // Detect Faces
