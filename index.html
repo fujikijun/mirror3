@@ -168,7 +168,7 @@ function onStart() {
       videoElem.play();
       
       matSrc  = new cv.Mat(height, width, cv.CV_8UC4);  // For Video Capture
-      matDst  = new cv.Mat(height/3, width/3, cv.CV_8UC4);  // For Canvas Preview
+      matDst  = new cv.Mat(height/3.5, width/3.5, cv.CV_8UC4);  // For Canvas Preview
       matGrey = new cv.Mat();
       faces = new cv.RectVector();
       classifier = new cv.CascadeClassifier();
