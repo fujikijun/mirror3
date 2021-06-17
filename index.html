@@ -83,9 +83,6 @@ h2 {
     <div hidden><canvas id="canvas" width="1280" height="720" ></canvas></div>
   </div>
 </div>
-
-<p><a href="index.html">Back To Index</a></p>
-
 <script>
 
 // https://docs.opencv.org/3.4.0/df/d6c/tutorial_js_face_detection_camera.html
@@ -238,7 +235,7 @@ cv.resize( matSrc, matDst, matDst.size() );
   }
 */
 
-  if( faces.size() )
+  if( faces.size() > 0 )
   {
     cv.imshow('canvas', matDst);  // Set Element ID
   }
