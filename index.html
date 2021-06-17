@@ -236,9 +236,11 @@ cv.resize( matSrc, matDst, matDst.size() );
   }
 */
 
+    cv.imshow('canvas', matDst);  // Set Element ID
+
   if( faces.size() > 0 )
   {
-    cv.imshow('canvas', matDst);  // Set Element ID
+
 
 var canvas = document.getElementById("video");
 var ctx = canvas.getContext("2d");
